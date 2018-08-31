@@ -1,0 +1,55 @@
+/*通用样式*/
+*,::before,::after{
+    font-size:14px;
+    margin:0;
+    padding:0;
+    /*清楚移动端默认的点击高亮效果*/
+    -webkit-tap-highlight-color:transparent;
+    /*盒子模型  输入box-sizing以后按下tab键，会自动补充前缀等*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /*给所有标签设置默认字体，sans-serif是移动端的默认字体*/
+    font-family:'微软雅黑',sans-serif;
+}
+/*input标签去掉默认样式，扁平化*/
+input{
+    border:0;
+    -webkit-appearance:none;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style:none;
+}
+/*设置浮动*/
+.f_l{
+    float:left;
+}
+.f_r{
+    float:right;
+}
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content:'';
+    display: block;
+    line-height: 0;
+    height:0;
+    visibility: hidden;
+    clear:both;
+}
+
+/*添加边框*/
+.border_l{
+   border-left:1px solid #cccccc;
+}
+.border_r{
+    border-right:1px solid #cccccc;
+}
+.border_t{
+    border-top:1px solid #cccccc;
+}
+.border_b{
+    border-bottom:1px solid #cccccc;
+}

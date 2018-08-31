@@ -1,0 +1,283 @@
+.jd_container{
+    width:100%;
+    min-height: 800px;
+    background-color: #eeeeee;
+}
+/*设置头部样式*/
+.jd_header{
+    width:100%;
+    height:40px;
+    background-color: rgb(201,21,35);
+    position:fixed;
+    z-index: 2;
+    padding-left: 70px;
+    padding-right:60px;
+}
+.jd_header .header_logo{
+    width:60px;
+    height:36px;
+    /*设置定位就能将其转变为块级标签*/
+    position: absolute;
+    left:5px;
+    top:2px;
+    background-image:url(../images/sprites.png);
+    background-repeat: no-repeat;
+    background-position:0 -103px;
+    /*设置背景图片的大小压缩了一倍，目的是为了防止用户看到像素颗粒*/
+    background-size:200px 200px;
+}
+.jd_header .header_search{
+    width:100%;
+    height:30px;
+    margin-top: 5px;
+    border-radius:15px;
+    padding-left:28px;
+}
+.jd_header .header_login{
+    position: absolute;
+    right:15px;
+    top:0;
+    line-height: 40px;
+    font-size: 16px;
+    color: #ffffff;
+}
+.jd_header .header_glass{
+    width:20px;
+    height:20px;
+    display: block;
+    background-image: url(../images/sprites.png);
+    background-repeat: no-repeat;
+    background-position: -60px -109px;
+    background-size:200px 200px;
+    position: absolute;
+    left:76px;
+    top:10px;
+}
+
+/*设置轮播图样式*/
+.jd_banner{
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+.jd_banner .banner_images{
+    /*10张图片横着放，每张图片的宽度是父盒子的宽度，所以ul的宽度是父盒子的1000% */
+    width:1000%;
+    /*默认要显示的是第一张图片，是ul自己的百分之十*/
+    transform: translateX(-10%);
+}
+.jd_banner .banner_images li{
+    float:left;
+    /*是父盒子的10% */
+    width:10%;
+}
+.jd_banner .banner_images li a{
+    display: block;
+    width:100%;
+}
+.jd_banner .banner_images li a img{
+    display:block;
+    width:100%;
+}
+
+/*轮播图里面的索引标签*/
+.jd_banner .banner_index{
+    position: absolute;
+    bottom:5px;
+    left:50%;
+    margin-left:-46px;
+}
+.jd_banner .banner_index li{
+    float:left;
+    width:6px;
+    height:6px;
+    border-radius: 50%;
+    border:1px solid #ffffff;
+    margin-left: 5px;
+}
+.jd_banner .banner_index li.current{
+    background-color: white;
+}
+
+/*导航栏的样式*/
+.jd_nav{
+    width:100%;
+    border-bottom: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+.jd_nav ul{
+    width:100%;
+    padding-top: 15px;
+}
+.jd_nav ul li{
+    width:25%;
+    float: left;
+}
+.jd_nav ul li a{
+    width:100%;
+    display: block;
+}
+.jd_nav ul li a img{
+    width:40%;
+    display: block;
+    margin:0 auto;
+}
+.jd_nav ul li a p{
+    width:100%;
+    color:gray;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+/*主要内容区域的样式*/
+.jd_main{
+    width:100%;
+    padding:0 5px;
+}
+.jd_main .jd_content{
+    width:100%;
+    background-color: #ffffff;
+    min-height: 150px;
+    margin-top:10px;
+    box-shadow: 0 0 2px gray;
+}
+.jd_main .jd_content .content_top{
+    width:100%;
+    height:32px;
+    border-bottom: 1px solid #cccccc;
+}
+.jd_main .jd_content .content_bottom{
+    width:100%;
+}
+/*内容区域的第一个盒子设置特殊样式*/
+.jd_main .jd_content:first-child{
+
+}
+.jd_main .jd_content:first-child .content_top{
+    border-bottom: none;
+    /*background-color: palevioletred;*/
+}
+.jd_main .jd_content:first-child .content_top span{
+    background-image: url("../images/seckill-icon.png");
+    background-size:20px 25px;
+    float: left;
+    width:20px;
+    height:25px;
+    margin-top:3.5px;
+    margin-left: 8px;
+}
+.jd_main .jd_content:first-child .content_top p{
+    float: left;
+    width:60px;
+    height:32px;
+    line-height: 32px;
+    margin:0 8px;
+    color:#d8505c;
+}
+.jd_main .jd_content:first-child .content_top ul{
+    height:32px;
+    padding-top:8.5px;
+}
+.jd_main .jd_content:first-child .content_top ul li{
+    float:left;
+    width:15px;
+    height:15px;
+    background-color: #000;
+    color: #ffffff;
+    margin-right: 3px;
+    line-height: 15px;
+    text-align: center;
+}
+/*这样可以取到第三个和第六个li标签*/
+.jd_main .jd_content:first-child .content_top ul li:nth-child(3n){
+    background-color: white;
+    color:black;
+    margin-right: 0;
+    width:12px;
+}
+.jd_main .jd_content:first-child .content_top ul li:nth-child(2),
+.jd_main .jd_content:first-child .content_top ul li:nth-child(5){
+    margin-right: 0;
+}
+.jd_main .jd_content:first-child .content_top a{
+    float:right;
+    color:#333333;
+    line-height: 32px;
+    margin-right:8px;
+}
+.jd_main .jd_content:first-child .content_bottom{
+    width:100%;
+}
+.jd_main .jd_content:first-child .content_bottom ul{
+    width:100%;
+}
+.jd_main .jd_content:first-child .content_bottom ul li{
+    /*这样设置的目的是为了避免当父盒子的宽度很大时，零头被去掉，从而影响布局，
+    比如，假设设置的宽度是33%，那么当父盒子的宽度为100px时，有1px取不到，这时影响不大，‘
+    但如果父盒子的宽度为1000px时，将有10px取不到，这时的影响就很大了，肉眼是可以看的出来的
+    */
+    width:33.3333333%;
+    float:left;
+}
+.jd_main .jd_content:first-child .content_bottom ul li a{
+    display: block;
+    width:100%;
+    border-right:1px solid #cccccc;
+}
+.jd_main .jd_content:first-child .content_bottom ul li:last-child a{
+    border-right:none;
+}
+.jd_main .jd_content:first-child .content_bottom ul li a img{
+    display: block;
+    width:60%;
+    margin:0 auto;
+}
+.jd_main .jd_content:first-child .content_bottom ul li p{
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+}
+/*由于a标签跟p标签是平级的，所以第一个p标签的索引为2，而a标签的索引为1*/
+.jd_main .jd_content:first-child .content_bottom ul li p:nth-child(2){
+    color:#d8505c;
+}
+.jd_main .jd_content:first-child .content_bottom ul li p:nth-child(3){
+    /*设置样式横线穿过字体*/
+    text-decoration: line-through;
+}
+/*给除了第一个jd_content盒子以外的其他jd_content盒子添加样式*/
+.jd_main .jd_content:nth-child(n+2) .content_top{
+
+}
+.jd_main .jd_content:nth-child(n+2) .content_top span{
+    line-height: 32px;
+    margin-left: 20px;
+    position: relative;
+}
+.jd_main .jd_content:nth-child(n+2) .content_top span::before{
+    content: "";
+    width:3px;
+    height:12px;
+    background-color: #d8505c;
+    position: absolute;
+    top:10px;
+    left:-10px;
+}
+.jd_main .jd_content:nth-child(n+2) .content_bottom{
+    width:100%;
+}
+.jd_main .jd_content:nth-child(n+2) .content_bottom ul{
+    width:100%;
+}
+.jd_main .jd_content:nth-child(n+2) .content_bottom ul li{
+    width:50%;
+}
+.jd_main .jd_content:nth-child(n+2) .content_bottom ul li a{
+    width:100%;
+    display: block;
+}
+.jd_main .jd_content:nth-child(n+2) .content_bottom ul li a img{
+    width:100%;
+    display: block;
+}
